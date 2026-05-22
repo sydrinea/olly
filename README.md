@@ -36,4 +36,4 @@ It is recommended to use the Nix development shell at the root of this repositor
 
 # License
 
-[MIT](https://github.com/cecelot/olly/blob/main/LICENSE)
+[MIT](https://github.com/sydrinea/olly/blob/main/LICENSE)
