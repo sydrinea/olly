@@ -48,7 +48,7 @@ function LiveBoard({ gameId }: LiveBoardProps) {
   const [token, setToken] = useState<string>();
   const [preview, setPreview] = useState<Array<[number, number]>>();
 
-  const { sendJsonMessage } = useWebSocket("ws://localhost:3000/live", {
+  const { sendJsonMessage } = useWebSocket("wss://api.othello.sydneyn.dev/live", {
     onMessage: (msg) => {
       const data: Event = JSON.parse(msg.data);
       const handlers = {

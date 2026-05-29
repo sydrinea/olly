@@ -1,6 +1,6 @@
 import { ToastOptions } from "react-hot-toast";
 
-export const BASE_API_URL = "http://localhost:3000";
+export const BASE_API_URL = "https://api.othello.sydneyn.dev";
 
 const TOAST_BASE_OPTIONS: ToastOptions = {
   position: "bottom-center",

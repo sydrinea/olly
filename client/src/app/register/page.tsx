@@ -17,7 +17,7 @@ export default function Register() {
 
   const onClick = (_: unknown) => {
     return (async () => {
-      const res = await fetch("http://localhost:3000/register", {
+      const res = await fetch("https://api.othello.sydneyn.dev/register", {
         credentials: "include",
         method: "POST",
         headers: {
