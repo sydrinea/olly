@@ -40,7 +40,7 @@ async fn authenticate(
 }
 
 pub async fn callback(mut socket: WebSocket, state: Arc<AppState>) {
-    let duration = Duration::from_millis(500);
+    let duration = Duration::from_secs(5);
     let req = tokio::time::timeout(duration, socket.recv()).await;
     match req {
         Ok(Some(Ok(msg))) => {
