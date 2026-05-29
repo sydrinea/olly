@@ -36,10 +36,9 @@ pub async fn login(
         base64::prelude::BASE64_STANDARD.encode(dst)
     };
     let token = helpers::create_session(&state, &user, key).await?;
-    Ok((
-        jar.add(Cookie::new(strings::SESSION_COOKIE_NAME, token.clone())),
-        Redirect::to("/@me"),
-    ))
+    let mut cookie = Cookie::new(strings::SESSION_COOKIE_NAME, token.clone());
+    cookie.set_domain("othello.sydneyn.dev");
+    Ok((jar.add(cookie), Redirect::to("/@me")))
 }
 
 #[cfg(test)]
